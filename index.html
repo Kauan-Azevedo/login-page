@@ -1,53 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Login</title>
   </head>
   <body>
     <main>
-      <section>
+      <section class="image-section">
         <img src="" alt="people image" />
       </section>
-      <section>
-        <div>
+      <section class="form-section">
+        <div class="form-section__header">
           <h4>Bem-vindo de volta</h4>
           <h3>Faça login na sua conta</h3>
         </div>
-        <form action="POST">
-          <label for="email">
+        <form action="POST" class="login-card">
+          <label for="email" class="email-field">
             <span>E-mail</span>
             <input
               type="email"
               name="email"
               id="email"
               placeholder="example@gmail.com"
+              required
+              autocomplete="off"
             />
           </label>
-          <label for="password">
+          <label for="password" class="password-field">
             <span>Senha</span>
             <input
               type="password"
               name="password"
               id="password"
               placeholder="senha"
+              required
             />
           </label>
-          <div>
+          <div class="remember-me">
             <input type="checkbox" />
             Lembre de mim
           </div>
-          <div>
+          <div class="forgot-password">
             <a href="#">Esqueceu sua senha?</a>
           </div>
-          <div>
+          <div class="button-group">
             <button>Entrar na conta</button>
             <button>Ou faça login com o Google</button>
           </div>
-          <div>Não tem uma conta? <a href="#">Cadastre-se</a></div>
+          <div class="register">
+            Não tem uma conta? <a href="#">Cadastre-se</a>
+          </div>
         </form>
       </section>
     </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>
