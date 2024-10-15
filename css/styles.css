@@ -1,3 +1,20 @@
+:root {
+  --primary-color: #1e9e6a;
+
+  --text-color: #333;
+
+  --background-color: #f7fafc;
+  --alt-background-color: #f3fff2;
+
+  --dark-10: #1a202c;
+  --dark-20: #656769;
+  --dark-30: #e8e8e8;
+  --dark-40: #f7fafc;
+  --dark-50: #ffffff;
+
+  font-family: "Archivo", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +24,117 @@
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+main {
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-section {
+  width: 50%;
+  height: 100%;
+  background-color: var(--alt-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  width: 50%;
+  height: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section .form-section__header h4,
+.form-section .form-section__header h3 {
+  padding: 8px;
+}
+
+.login-card {
+  width: 356px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  align-items: flex-start;
+}
+
+.login-card .email-field,
+.login-card .password-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-card .email-field span,
+.login-card .password-field span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.login-card .email-field input,
+.login-card .password-field input {
+  width: 100%;
+  height: 49px;
+  padding: 0 15px;
+  background-color: var(--background-color);
+  border: 1px solid var(--dark-30);
+  outline: transparent;
+}
+
+.login-card .login-card__footer {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.login-card .login-card__footer .remember-me {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.login-card .login-card__footer .remember-me input {
+  width: 16px;
+  height: 16px;
+  background-color: var(--background-color);
+  border-radius: 100%;
+  vertical-align: middle;
+  border: 1px solid var(--dark-30);
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.login-card .login-card__footer .remember-me input:checked {
+  background-color: var(--primary-color);
+}
+
+.login-card .login-card__footer .forgot-password {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 16px;
 }

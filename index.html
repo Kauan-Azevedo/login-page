@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Login</title>
   </head>
   <body>
     <main>
-      <section class="image-section">
-        <img src="" alt="people image" />
-      </section>
       <section class="form-section">
         <div class="form-section__header">
           <h4>Bem-vindo de volta</h4>
@@ -38,12 +41,16 @@
               required
             />
           </label>
-          <div class="remember-me">
-            <input type="checkbox" />
-            Lembre de mim
-          </div>
-          <div class="forgot-password">
-            <a href="#">Esqueceu sua senha?</a>
+          <div class="login-card__footer">
+            <div class="remember-me">
+              <label for="remember">
+                <input type="checkbox" name="remember" id="remember" />
+                <span>Lembre de mim</span>
+              </label>
+            </div>
+            <div class="forgot-password">
+              <a href="#">Esqueceu sua senha?</a>
+            </div>
           </div>
           <div class="button-group">
             <button>Entrar na conta</button>
@@ -53,6 +60,9 @@
             Não tem uma conta? <a href="#">Cadastre-se</a>
           </div>
         </form>
+      </section>
+      <section class="image-section">
+        <img src="./public/svg.svg" alt="people image" />
       </section>
     </main>
     <script src="./js/index.js"></script>
