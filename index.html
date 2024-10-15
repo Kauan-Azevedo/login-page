@@ -19,7 +19,7 @@
           <h4>Bem-vindo de volta</h4>
           <h3>Faça login na sua conta</h3>
         </div>
-        <form action="POST" class="login-card">
+        <form action="POST" class="login-form">
           <label for="email" class="email-field">
             <span>E-mail</span>
             <input
@@ -41,7 +41,7 @@
               required
             />
           </label>
-          <div class="login-card__footer">
+          <div class="login-form__footer">
             <div class="remember-me">
               <label for="remember">
                 <input type="checkbox" name="remember" id="remember" />
@@ -53,8 +53,11 @@
             </div>
           </div>
           <div class="button-group">
-            <button>Entrar na conta</button>
-            <button>Ou faça login com o Google</button>
+            <button type="submit" class="login-btn">Entrar na conta</button>
+            <button class="google-btn">
+              <img src="./public/google.svg" />
+              <span>Ou faça login com o Google</span>
+            </button>
           </div>
           <div class="register">
             Não tem uma conta? <a href="#">Cadastre-se</a>
@@ -62,7 +65,7 @@
         </form>
       </section>
       <section class="image-section">
-        <img src="./public/svg.svg" alt="people image" />
+        <img src="./public/background.svg" alt="people image" />
       </section>
     </main>
     <script src="./js/index.js"></script>

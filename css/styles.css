@@ -66,11 +66,12 @@ main {
 
 .form-section .form-section__header h4,
 .form-section .form-section__header h3 {
-  padding: 8px;
+  padding: 8px 0px;
 }
 
-.login-card {
-  width: 356px;
+.login-form {
+  width: 100%;
+  max-width: 356px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -78,31 +79,33 @@ main {
   align-items: flex-start;
 }
 
-.login-card .email-field,
-.login-card .password-field {
+.login-form .email-field,
+.login-form .password-field {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.login-card .email-field span,
-.login-card .password-field span {
+.login-form .email-field span,
+.login-form .password-field span {
   font-size: 18px;
   font-weight: 400;
 }
 
-.login-card .email-field input,
-.login-card .password-field input {
+.login-form .email-field input,
+.login-form .password-field input {
   width: 100%;
-  height: 49px;
+  min-height: 49px;
   padding: 0 15px;
   background-color: var(--background-color);
   border: 1px solid var(--dark-30);
   outline: transparent;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.login-card .login-card__footer {
+.login-form .login-form__footer {
   width: 100%;
   display: flex;
   gap: 5px;
@@ -111,12 +114,12 @@ main {
   justify-content: space-between;
 }
 
-.login-card .login-card__footer .remember-me {
+.login-form .login-form__footer .remember-me {
   font-weight: 500;
   font-size: 16px;
 }
 
-.login-card .login-card__footer .remember-me input {
+.login-form .login-form__footer .remember-me input {
   width: 16px;
   height: 16px;
   background-color: var(--background-color);
@@ -124,17 +127,76 @@ main {
   vertical-align: middle;
   border: 1px solid var(--dark-30);
   appearance: none;
-  -webkit-appearance: none;
   outline: none;
   cursor: pointer;
 }
 
-.login-card .login-card__footer .remember-me input:checked {
+.login-form .login-form__footer .remember-me input:checked {
   background-color: var(--primary-color);
 }
 
-.login-card .login-card__footer .forgot-password {
+.login-form .login-form__footer .forgot-password {
   color: var(--primary-color);
   font-weight: 500;
   font-size: 16px;
+}
+
+.login-form .button-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form .button-group .login-btn {
+  width: 100%;
+  min-height: 42px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-form .button-group .google-btn {
+  width: 100%;
+  min-height: 42px;
+  border: none;
+  background-color: var(--dark-10);
+  color: var(--dark-50);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.login-form .register {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.login-form .register a {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+@media (max-width: 800px) {
+  .form-section {
+    padding: 8px;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  .image-section {
+    display: none;
+  }
 }
