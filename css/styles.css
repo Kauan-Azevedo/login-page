@@ -85,6 +85,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 
 .login-form .email-field span,
@@ -99,10 +100,29 @@ main {
   min-height: 49px;
   padding: 0 15px;
   background-color: var(--background-color);
-  border: 1px solid var(--dark-30);
+  border: 2px solid var(--dark-30);
   outline: transparent;
   font-size: 16px;
   font-weight: 500;
+}
+
+:is(
+    .login-form .email-field input,
+    .login-form .password-field input
+  ):invalid:not(:placeholder-shown) {
+  border-color: lightcoral;
+}
+
+.login-form .email-field:has(input:invalid:not(:placeholder-shown))::after,
+.login-form .password-field:has(input:invalid:not(:placeholder-shown))::after {
+  color: lightcoral;
+  content: "Campo inválido";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .login-form .login-form__footer {
@@ -141,14 +161,15 @@ main {
   font-size: 16px;
 }
 
-.login-form .button-group {
+.button-group {
   width: 100%;
+  max-width: 356px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.login-form .button-group .login-btn {
+.button-group .login-btn {
   width: 100%;
   min-height: 42px;
   border: none;
@@ -159,7 +180,7 @@ main {
   cursor: pointer;
 }
 
-.login-form .button-group .google-btn {
+.button-group .google-btn {
   width: 100%;
   min-height: 42px;
   border: none;
