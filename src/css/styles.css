@@ -218,15 +218,15 @@ main {
 }
 
 @media (max-width: 800px) {
-  .form-section {
+  .login-page .form-section {
     padding: 8px;
   }
 
-  .form-section {
+  .login-page .form-section {
     width: 100%;
   }
 
-  .image-section {
+  .login-page .image-section {
     display: none;
   }
 }

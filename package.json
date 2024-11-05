@@ -18,9 +18,12 @@
     "vite": "^5.4.8"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.45.6",
+    "@supabase/auth-ui-react": "^0.4.7",
+    "@supabase/auth-ui-shared": "^0.1.8",
+    "@supabase/supabase-js": "^2.46.0",
     "@tanstack/react-router": "^1.77.4",
     "@tanstack/router-devtools": "^1.77.4",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }
