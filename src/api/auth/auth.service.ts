@@ -1,5 +1,5 @@
 import { redirect } from "@tanstack/react-router";
-import supabase from "../api";
+import { supabase } from "../api";
 
 export const signUp = async (email: string, password: string) => {
   const { data, error } = await supabase.auth.signUp({ email, password });
