@@ -1,16 +1,36 @@
-import LoginForm from "../../components/forms/login";
+import { useState } from "react";
+import LoginForm from "../../components/forms/Login";
+import RegisterForm from "../../components/forms/Register";
 
 const LoginPage = () => {
+  const [isLogin, setIsLogin] = useState(true);
+
   return (
     <div className="login-page">
       <section className="form-section">
         <div className="form-section__header">
-          <h4>Bem-vindo de volta</h4>
-          <h3>Faça login na sua conta</h3>
+          {isLogin ? (
+            <>
+              <h4>Bem-vindo de volta</h4>
+              <h3>Faça login na sua conta</h3>
+            </>
+          ) : (
+            <>
+              <h4>Crie uma conta</h4>
+              <h3>Registre-se para começar</h3>
+            </>
+          )}
         </div>
-        <LoginForm />
+        {isLogin ? <LoginForm /> : <RegisterForm />}
         <div className="register">
-          Não tem uma conta? <a href="#">Cadastre-se</a>
+          {isLogin ? "Não tem uma conta?" : "Já tem uma conta?"}
+          <a
+            onClick={() => {
+              setIsLogin(!isLogin);
+            }}
+          >
+            {isLogin ? "Registre-se" : "Faça login"}
+          </a>
         </div>
       </section>
       <section className="image-section">

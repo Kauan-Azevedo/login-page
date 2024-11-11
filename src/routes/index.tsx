@@ -4,6 +4,7 @@ import { setupAuthListener } from "../api/auth/auth.service";
 import { signOut, isAuthenticated } from "../api/auth/auth.service";
 
 import "../css/styles.css";
+import Navbar from "../components/Navbar";
 
 export const Route = createFileRoute("/")({
   beforeLoad: async () => {
@@ -40,6 +41,7 @@ function HomeComponent() {
 
   return (
     <div>
+      <Navbar />
       <h1>Página Inicial</h1>
       <button
         onClick={() => {

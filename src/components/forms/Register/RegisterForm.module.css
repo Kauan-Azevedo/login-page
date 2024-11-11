@@ -1,0 +1,37 @@
+.registerForm {
+  width: 100%;
+  max-width: 356px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  align-items: flex-start;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.buttonGroup {
+  width: 100%;
+  max-width: 356px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.registerBtn {
+  width: 100%;
+  min-height: 42px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
