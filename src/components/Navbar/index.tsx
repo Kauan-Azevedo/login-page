@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
         <a className={s.navbar_item} href="/">
           Home
         </a>
-        <a className={s.navbar_item} href="/login">
+        <a className={s.navbar_item} href="/auth">
           Login
         </a>
         <a className={s.navbar_item} href="/register">

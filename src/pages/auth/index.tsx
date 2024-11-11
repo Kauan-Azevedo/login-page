@@ -2,7 +2,7 @@ import { useState } from "react";
 import LoginForm from "../../components/forms/Login";
 import RegisterForm from "../../components/forms/Register";
 
-const LoginPage = () => {
+const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
@@ -40,4 +40,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default AuthPage;

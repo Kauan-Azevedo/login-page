@@ -9,7 +9,7 @@ import Navbar from "../components/Navbar";
 export const Route = createFileRoute("/")({
   beforeLoad: async () => {
     const authenticated = await isAuthenticated();
-    if (!authenticated) throw redirect({ to: "/login" });
+    if (!authenticated) throw redirect({ to: "/auth" });
   },
   component: HomeComponent,
 });
@@ -24,10 +24,10 @@ function HomeComponent() {
       }
       await signOut();
       alert("signOut!");
-      navigate({ to: "/login" });
+      navigate({ to: "/auth" });
     } catch (error: any) {
       if (error.message === "Auth session missing!") {
-        navigate({ to: "/login" });
+        navigate({ to: "/auth" });
       }
     }
   };

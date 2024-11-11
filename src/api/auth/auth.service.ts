@@ -45,7 +45,7 @@ export const setupAuthListener = () => {
       if (session) {
         redirect({ to: "/" });
       } else {
-        redirect({ to: "/login" });
+        redirect({ to: "/auth" });
       }
     }
   );
