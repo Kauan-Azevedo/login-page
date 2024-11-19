@@ -1,24 +1,25 @@
-import s from "./navbar.module.css";
+import styles from "./navbar.module.css";
 
 const Navbar: React.FC = () => {
   return (
-    <div className={s.navbar}>
-      <div className={s.logo_wrapper}>
-        <img className={s.logo} src="/logo.svg" alt="logo" />
+    <div className={styles.navbar}>
+      <div className={styles.logo_wrapper}>
+        <img
+          className={styles.logo}
+          src="/logo.svg"
+          alt="imagine um logo aqui"
+        />
       </div>
-      <div className={s.navbar_items}>
-        <a className={s.navbar_item} href="/">
+      <div className={styles.navbar_items}>
+        <a className={styles.navbar_item} href="/">
           Home
         </a>
-        <a className={s.navbar_item} href="/auth">
+        <a className={styles.navbar_item} href="/auth">
           Login
         </a>
-        <a className={s.navbar_item} href="/register">
-          Register
-        </a>
-        <a className={s.navbar_item} href="/profile">
+        {/* <a className={styles.navbar_item} href="/profile">
           Perfil
-        </a>
+        </a> */}
       </div>
     </div>
   );

@@ -74,6 +74,12 @@ export interface getPokemonDetailsResponse {
   sprites: {
     back_default: string;
     front_default: string;
+    back_shiny: string;
+    front_shiny: string;
+  };
+  cries: {
+    latest: string;
+    legacy: string;
   };
   stats: {
     base_stat: number;
