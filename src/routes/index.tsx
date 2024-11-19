@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { setupAuthListener } from "../api/auth/auth.service";
 import { isAuthenticated } from "../api/auth/auth.service";
-import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import "../css/styles.css";
 
 import Navbar from "../components/Navbar";
