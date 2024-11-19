@@ -35,7 +35,7 @@ function HomeComponent() {
   const [showDetailsModal, setShowDetailsModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
-  const itemsPerPage = 20;
+  const itemsPerPage = 24;
 
   useEffect(() => {
     const fetchData = async () => {
