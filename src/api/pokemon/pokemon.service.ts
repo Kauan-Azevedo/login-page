@@ -9,8 +9,13 @@ import {
   getPokemonsTypesResponse,
 } from "./pokemon.response.types";
 
-export async function getPokemonList(): Promise<getPokemonListResponse> {
-  const response = await api.get<getPokemonListResponse>("/pokemon");
+export async function getPokemonList(
+  offset = 0,
+  limit = 20
+): Promise<getPokemonListResponse> {
+  const response = await api.get<getPokemonListResponse>(
+    `/pokemon/?offset=${offset}&limit=${limit}`
+  );
   return response.data;
 }
 
