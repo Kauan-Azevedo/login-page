@@ -27,7 +27,6 @@ export const Route = createFileRoute("/")({
 });
 
 function HomeComponent() {
-  const navigate = useNavigate({ from: "/" });
   const [pokemonList, setPokemonList] = useState<getPokemonListResponse | null>(
     null
   );
@@ -73,7 +72,7 @@ function HomeComponent() {
   };
 
   return (
-    <div>
+    <>
       <Navbar />
       <Content>
         {pokemonList && (
@@ -106,7 +105,7 @@ function HomeComponent() {
           />
         )}
       </Content>
-    </div>
+    </>
   );
 }
 
