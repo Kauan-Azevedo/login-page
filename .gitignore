@@ -1,3 +1,7 @@
+# Git
+.env
+.env.dev
+
 # Local
 .DS_Store
 *.local
